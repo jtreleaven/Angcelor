@@ -3,7 +3,8 @@
 // AngularJS stub file
 var angcelor = angular.module("angcelor", [
     'ngRoute',
-    'restangular'
+    'restangular',
+    'BrowseServices'
 ]);
 
 angcelor.config(function($routeProvider, RestangularProvider) {

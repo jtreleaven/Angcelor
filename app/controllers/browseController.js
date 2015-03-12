@@ -1,7 +1,7 @@
 // AngularJS stub file
 
-angcelor.controller("browseCtrl", ['$scope', 'Restangular', function($scope, Restangular) {
+angcelor.controller("browseCtrl", ['$scope', 'Subnet', function($scope, Subnet) {
 
-    $scope.subnets = Restangular.all('Subnet/GetAllSubnets').getList();
+    $scope.subnets = Subnet.query();
 
 }]);
