@@ -53,7 +53,7 @@
 					</tr>
 				</thead>
 				<tbody>
-				<tr>
+				<tr ng-repeat="IP_Address in IP_Addresses">
 					<td class="ipAddressCol">{{ IP_Address.ipv4_address }}</td>
 					<td class="descriptionCol">{{ IP_Address.description }}</td>
 					<div ng-if="IP_Address.monitor==true">
