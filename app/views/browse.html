@@ -1,0 +1,84 @@
+
+<div id="background" class="container">
+    <div id="subnetTableContainer" class="tableContainer">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Subnet</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="subnet in subnets">
+                    <td>{{ subnet.name }}</td>
+                    <td>{{ subnet.description }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div id="ipTableContainer" class="tableContainer">
+        <table id="ipTable" class="table table-striped">
+            <thead>
+            <tr>
+                <th>IP Address</th>
+                <th>Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th>000.000.001.000</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.001</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.002</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.003</th>
+                <th>Example Example Example</th>
+            </tr><tr>
+                <th>000.000.001.004</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.005</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.006</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.007</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.008</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.009</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.010</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.011</th>
+                <th>Example Example Example</th>
+            </tr>
+            <tr>
+                <th>000.000.001.012</th>
+                <th>Example Example Example</th>
+            </tr>
+        </table>
+    </div>
+
+    <button id="advSearch" type="button" class="btn btn-default" onclick="AdvancedSearch()">Advanced Search</button>
+    <button id="add" type="button" class="btn btn-default btn-lg" onclick="Add()">+</button>
+</div>
