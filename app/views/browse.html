@@ -1,84 +1,173 @@
+<html>
+	<head>
+		<title>IP Address Manager</title>
+		<link rel="stylesheet" type="text/css" href="./css/style.css">
+		<link rel="stylesheet" type="text/css" href="./bootstrap-3.3.2-dist/css/bootstrap.css">
+		<link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+		<script type="text/javascript" src="./jquery/jquery-1.11.2.js"></script>
+		<script type="text/javascript" src="./jquery/jquery-ui.js"></script>
+		<script type="text/javascript" src="./js/splitter.js"></script>
+		<script type="text/javascript" src="./bootstrap-3.3.2-dist/js/bootstrap.js"></script>
+	</head>
+	<body>
+	
+	<img src="./images/arcelormittal-logo.gif" alt="ArcelorMittal" width="154" height="64" />
+	
+	<script type="text/javascript">
+    $(document).ready(function () {
+        $('#MySplitter').splitter({resizeToWidth:true});
+    });
+	</script>
+	
+	
+	<div id="background" class="container">
+		<div id="MySplitter" class="container">
+			<div id="subnetTableContainer" class="tableContainer">
+				<table class="table table-hover">
+				<thead>
+					<tr>
+						<th class="subnetCol">Subnet</th>
+						<th class="subnetNameCol">Name</th>
+						<th class="subnetDescriptCol">Description</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr ng-repeat="Subnet in Subnets">
+					<td class="subnetCol">{{ Subnet.subnet_id }}</td>
+					<td class="subnetNameCol">{{ Subnet.name }}</td>
+					<td class="subnetDescriptCol">{{ Subnet.description }}</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
 
-<div id="background" class="container">
-    <div id="subnetTableContainer" class="tableContainer">
-        <table class="table table-hover">
-            <thead>
-            <tr>
-                <th>Subnet</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="subnet in subnets">
-                    <td>{{ subnet.name }}</td>
-                    <td>{{ subnet.description }}</td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div id="ipTableContainer" class="tableContainer">
-        <table id="ipTable" class="table table-striped">
-            <thead>
-            <tr>
-                <th>IP Address</th>
-                <th>Description</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-                <th>000.000.001.000</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.001</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.002</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.003</th>
-                <th>Example Example Example</th>
-            </tr><tr>
-                <th>000.000.001.004</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.005</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.006</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.007</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.008</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.009</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.010</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.011</th>
-                <th>Example Example Example</th>
-            </tr>
-            <tr>
-                <th>000.000.001.012</th>
-                <th>Example Example Example</th>
-            </tr>
-        </table>
-    </div>
-
-    <button id="advSearch" type="button" class="btn btn-default" onclick="AdvancedSearch()">Advanced Search</button>
-    <button id="add" type="button" class="btn btn-default btn-lg" onclick="Add()">+</button>
-</div>
+			<div id="ipTableContainer" class="tableContainer">
+				<table id="ipTable" class="table table-striped">
+				<thead>
+					<tr>
+						<th class="ipAddressCol">IP Address</th>
+						<th class="descriptionCol">Description</th>
+						<th class="monitoredCol">Monitored</th>
+						<th class="dnsNameCol">DNS Name</th>
+						<th class="deviceTypeCol">Device Type</th>
+					</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td class="ipAddressCol">{{ IP_Address.ipv4_address }}</td>
+					<td class="descriptionCol">{{ IP_Address.description }}</td>
+					<div ng-if="IP_Address.monitor==true">
+						<td class="monitoredCol"><input type="checkbox" checked/></td>
+					</div>
+					<div ng-if="IP_Address.monitor!=true">
+						<td class="monitoredCol"><input type="checkbox"/></td>
+					</div>
+					<td class="dnsNameCol">{{ IP_Address.dns }}</td>
+					<td class="deviceTypeCol">{{ IP_Address.device_type }}</td>
+				</tr>
+				</tbody>
+				</table>
+			</div>
+	</div>
+		
+		<button id="advSearch" type="button" class="btn btn-default" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
+		<button id="add" type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#addModal">+</button>	
+	</div>
+	
+		<!-- Advanced Search Modal -->
+		<div class="modal fade" id="advSearchModal" tabindex="-1" role="dialog" aria-labelledby="advSearchModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Advanced Search</h4>
+		      </div>
+		      	<div class="form-group">
+               	  <label for="ipAddress">IP Address</label>
+    			  <input type="text" class="form-control" id="ipAddress" placeholder="000.000.000.000">
+  			  	</div>
+  			  	<div class="form-group">
+               	  <label for="addressDescription">Description</label>
+    			  <input type="text" class="form-control" id="address Description" placeholder="description">
+  			  	</div>
+  			  	<div class="form-group">
+               	  <label for="domainName">Domain Name</label>
+    			  <input type="text" class="form-control" id="domainName" placeholder="www.arcelormittal.com">
+  			  	</div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Submit</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+	<!-- Add Modal --->
+	
+	<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h4 class="modal-title" id="myModalLabel">Add/Edit</h4>
+		      </div>
+		      	<div class="tabbable">
+			        <ul class="nav nav-tabs">
+			        <li><a href="#tab1" data-toggle="tab">Subnet</a></li>
+			        <li class="active"><a href="#tab2" data-toggle="tab">IP Address</a></li>
+			        <li><a href="#tab3" data-toggle="tab">Add From File</a></li>
+			        </ul>
+			        <div class="tab-content">
+			        <div class="tab-pane" id="tab1">
+			        	<div class="form-group">
+               	  			<label for="addSubnet">Subnet</label>
+    			  			<input type="text" class="form-control" id="addSubnet" placeholder="000.000.000" ng-model="Subnet.subnet_id">
+  			  			</div>
+  			  			<div class="form-group">
+               	  			<label for="addSubnetName">Name</label>
+    			  			<input type="text" class="form-control" id="addSubnetName" placeholder="name" ng-model="Subnet.name">
+  			  			</div>
+  			  			<div class="form-group">
+               	  			<label for="addSubnetDescription">Description</label>
+    			  			<input type="text" class="form-control" id="addSubnetDescription" placeholder="description" ng-model="Subnet.description">
+  			  			</div>
+  			  		</div>
+			        <div class="tab-pane active" id="tab2">
+			        	<div class="form-group">
+               	  			<label for="addIpAddress">Address</label>
+    			  			<input type="text" class="form-control" id="addIpAddress" placeholder="000.000.000.000" ng-model="IP_Address.ipv4_address">
+  			  			</div>
+  			  			<div class="form-group">
+               	  			<label for="addIpAddressDescription">Description</label>
+    			  			<input type="text" class="form-control" id="addIpAddressDescription" placeholder="description" ng-model="IP_Address.description">
+  			  			</div>
+  			  			<div class="form-group">
+               	  			<label for="addMonitored">Monitored</label>
+    			  			<input type="checkbox" id="addMonitored" ng-model="IP_Address.monitor">
+  			  			</div>
+  			  			<div class="form-group">
+               	  			<label for="addDNSName">DNS Name</label>
+    			  			<input type="text" class="form-control" id="addDNSName" placeholder="www.arcelormittal.com" ng-model="IP_Address.dns">
+  			  			</div>
+  			  			<div class="form-group">
+               	  			<label for="addDevice Type">Device Type</label>
+    			  			<input type="text" class="form-control" id="addDeviceType" placeholder="server" ng-model="IP_Address.device_type">
+  			  			</div>
+			        </div>
+			        <div class="tab-pane" id="tab3">
+			        	<div class="text-center">
+               	  		<button type="button" class="btn btn-default btn-sm">browse</button>
+               	  		</div>
+  			  		</div>
+			        </div>
+			        </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary" ng-click="">Submit</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	
+	</body>
+</html>
