@@ -1,11 +1,14 @@
 <table id="ipTable" class="table table-striped">
     <thead>
-    <tr>
-        <th>IP Address</th>
-        <th>Description</th>
-    </tr>
+        <tr>
+            <th>IP Address</th>
+            <th>Description</th>
+        </tr>
     </thead>
     <tbody>
-
-    </tr>
+        <tr ng-repeat="ip_addr in ip_addrs">
+            <td>{{ ip_addr.ipv4_address }}</td>
+            <td>{{ ip_addr.description  }}</td>
+        </tr>
+    </tbody>
 </table>
