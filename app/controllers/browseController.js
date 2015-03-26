@@ -5,27 +5,34 @@ angcelor.controller("browseCtrl", ['$scope', 'Subnet', function($scope, Subnet) 
     function initializeSubnets() {
         var subnets = Subnet.query();
         subnets.$promise.then(function(results) {
-            console.log(results);
             results[0].selected = true;
+            $scope.ip_addrs = results[0].ip_addresses;
             for (var i = 1; i < results.length; i++) {
                 results[i].selected = false;
             }
             $scope.subnets = results;
-            initializeIPAddresses($scope.subnets);
         });
     }
 
-    function initializeIPAddresses(subnets) {
-        var ip_addresses = [];
-        for (subnet in subnets) {
-            if (subnet.selected) {
-                ip_addresses.push(subnet.ip_addresses);
-            }
+    function deselectSubnet() {
+        for (var i = 0; i < $scope.subnets.length; i++) {
+            $scope.subnets[i].selected = false;
         }
+    }
 
-        $scope.ip_addrs = ip_addresses;
+    function updateIPAddrs() {
+        var subnet = _.find($scope.subnets, function(subnet) {
+            return subnet.selected;
+        });
+        $scope.ip_addrs = subnet.ip_addresses;
     }
 
     initializeSubnets();
+
+    $scope.changeSelectedSubnet = function(index) {
+        deselectSubnet();
+        $scope.subnets[index].selected = true;
+        updateIPAddrs();
+    }
 
 }]);

@@ -1,3 +1,15 @@
-.subnet_highlight {
-    background-color: #47a447;
+.selected_subnet {
+    background-color: #fd3702;
+}
+
+#subnet_table {
+    cursor: pointer;
+}
+
+#subnet_table > tbody > tr:hover {
+    background-color: #fda068;
+}
+
+#subnet_table > tbody > tr:active {
+    background-color: #fd2d13;
 }
