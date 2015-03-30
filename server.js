@@ -1,3 +1,4 @@
+
 /**
  * Created by jeff on 3/30/15.
  * Web server for live demo and continued updates and testing.
@@ -16,5 +17,4 @@ app.get('/', function(request, response) {
 app.listen(app.get('port'), function() {
     console.log("Node app is running at localhost:" + app.get('port'));
 });
-
 
