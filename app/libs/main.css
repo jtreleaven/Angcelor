@@ -1,3 +1,16 @@
+#background {
+    background-color: #c5c6c7;
+}
+
+.table-container {
+    height: 75%;
+    overflow-y: scroll;
+}
+
+.browse-content {
+    margin-top: 5%;
+}
+
 .selected_subnet {
     background-color: #fd3702;
 }
