@@ -8,6 +8,8 @@
             <div ng-include="'app/views/partials/ip_table.html'"></div>
         </div>
     </div>
-    <button id="advSearch" type="button" class="btn btn-default" onclick="AdvancedSearch()">Advanced Search</button>
-    <button id="add" type="button" class="btn btn-default btn-lg" onclick="Add()">+</button>
+    <button id="advSearch" type="button" class="btn btn-default" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
+    <button id="add" type="button" class="btn btn-default btn-lg" data-toggle="modal" data-target="#addModal">+</button>
+    <div ng-include="'app/views/partials/advanced_search.html'"></div>
+    <div ng-include="'app/views/partials/add.html'"></div>
 </div>
