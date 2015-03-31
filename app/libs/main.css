@@ -1,14 +1,18 @@
 .table-container {
-    height: 75%;
+    height: 65%;
     overflow-y: scroll;
 }
 
 .browse-content {
-    margin-top: 5%;
+    margin-top: 75px;
+}
+
+.column-center {
+    text-align: center;
 }
 
 .selected_subnet {
-    background-color: #fd3702;
+    background-color: rgba(253, 55, 2, 0.80);
 }
 
 #subnet_table {
@@ -16,9 +20,9 @@
 }
 
 #subnet_table > tbody > tr:hover {
-    background-color: #fda068;
+    background-color: rgba(253, 160, 104, 0.80);
 }
 
 #subnet_table > tbody > tr:active {
-    background-color: #fd2d13;
+    background-color: rgba(253, 45, 19, 0.80);
 }
