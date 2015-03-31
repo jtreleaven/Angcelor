@@ -1,3 +1,14 @@
+body {
+    background-color: rgba(5, 102, 100, 0.20);
+}
+
+#background {
+    height: 100%;
+    padding-right: 30px;
+    padding-left: 30px;
+    background-color: #FFFFFF;
+}
+
 .table-container {
     height: 65%;
     overflow-y: scroll;
@@ -7,12 +18,24 @@
     margin-top: 75px;
 }
 
+#advSearch {
+    height: 40px;
+    margin-top: 30px;
+    margin-left: 15px;
+}
+
+#add {
+    height: 40px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
 .column-center {
     text-align: center;
 }
 
 .selected_subnet {
-    background-color: rgba(253, 55, 2, 0.80);
+    background-color: rgba(253, 55, 2, 0.70);
 }
 
 #subnet_table {
@@ -20,9 +43,15 @@
 }
 
 #subnet_table > tbody > tr:hover {
-    background-color: rgba(253, 160, 104, 0.80);
+    background-color: rgba(253, 160, 104, 0.70);
 }
 
 #subnet_table > tbody > tr:active {
-    background-color: rgba(253, 45, 19, 0.80);
+    background-color: rgba(253, 45, 19, 0.70);
+}
+
+/* Modal Styles */
+
+.modal-form {
+    margin-top: 30px;
 }
