@@ -4,7 +4,6 @@ body {
 
 #background {
     height: 100%;
-    padding-right: 30px;
     padding-left: 30px;
     background-color: #FFFFFF;
 }
@@ -15,7 +14,8 @@ body {
 }
 
 .browse-content {
-    margin-top: 75px;
+    margin-top: 50px;
+    width: 100%;
 }
 
 #advSearch {
@@ -27,7 +27,7 @@ body {
 #add {
     height: 40px;
     margin-top: 30px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .column-center {
@@ -49,6 +49,7 @@ body {
 #subnet_table > tbody > tr:active {
     background-color: rgba(253, 45, 19, 0.70);
 }
+
 
 /* Modal Styles */
 

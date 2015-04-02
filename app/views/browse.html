@@ -1,12 +1,15 @@
 
 <div id="background" class="container">
+
     <div class="row browse-content">
-        <div id="subnetTableContainer" class="col-lg-6 single-box">
+        <div id="single-box-left" class="col-lg-6">
             <h2 class="sub-header">Subnets</h2>
             <div ng-include="'app/views/partials/subnet_table.html'" class="table-container"></div>
         </div>
 
-        <div id="ipTableContainer" class="col-lg-6 single-box">
+        <!--<div id="splitter" table-splitter splitter-left="#single-box-left" splitter-right="#single-box-right" splitter-width="6"></div>-->
+
+        <div id="single-box-right" class="col-lg-6">
             <h2 class="sub-header">IP Addresses</h2>
             <div ng-include="'app/views/partials/ip_table.html'" class="table-container"></div>
         </div>
