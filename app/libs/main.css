@@ -3,6 +3,10 @@ body {
 }
 
 .ui-splitbar {
+    background-color: rgba(155, 155, 155, 0.75)
+}
+
+.ui-splitbar:hover {
     background-color: rgba(70, 70, 70, 0.75)
 }
 
@@ -12,7 +16,7 @@ body {
 }
 
 .table-container {
-    /*height: 65%;*/
+    height: 85%;
     overflow-y: scroll;
 }
 
@@ -46,6 +50,8 @@ body {
 .selected_subnet {
     background-color: rgba(253, 55, 2, 0.70);
 }
+
+
 
 #subnet_table {
     cursor: pointer;
