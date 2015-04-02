@@ -2,32 +2,41 @@ body {
     background-color: rgba(5, 102, 100, 0.20);
 }
 
+.ui-splitbar {
+    background-color: rgba(70, 70, 70, 0.75)
+}
+
 #background {
     height: 100%;
-    padding-left: 30px;
     background-color: #FFFFFF;
 }
 
 .table-container {
-    height: 65%;
+    /*height: 65%;*/
     overflow-y: scroll;
+}
+
+.ui-layout-container {
+    overflow-x: hidden;
 }
 
 .browse-content {
     margin-top: 50px;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1150px;
 }
 
 #advSearch {
     height: 40px;
     margin-top: 30px;
-    margin-left: 15px;
+    margin-left: 20px;
 }
 
 #add {
     height: 40px;
     margin-top: 30px;
-    margin-right: 40px;
+    margin-right: 20px;
 }
 
 .column-center {

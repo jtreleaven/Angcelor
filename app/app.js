@@ -4,7 +4,8 @@
 var angcelor = angular.module("angcelor", [
     'ngRoute',
     'restangular',
-    'BrowseServices'
+    'BrowseServices',
+    'ui.layout'
 ]);
 
 angcelor.config(function($routeProvider, RestangularProvider) {
