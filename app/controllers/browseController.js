@@ -1,9 +1,9 @@
 // AngularJS stub file
 
-angcelor.controller("browseCtrl", ['$scope', 'Subnet', function($scope, Subnet) {
+angcelor.controller("browseCtrl", ['$scope', 'Browse', function($scope, Browse) {
 
     function initializeSubnets() {
-        var subnets = Subnet.query();
+        var subnets = Browse.query();
         subnets.$promise.then(function(results) {
             results[0].selected = true;
             $scope.ip_addrs = results[0].ip_addresses;

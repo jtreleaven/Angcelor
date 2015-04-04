@@ -6,20 +6,20 @@
         </div>
         <div class="modal-body">
             <ul class="nav nav-tabs">
-                <li role="presentation"><a show-tab href="#tabSubnet">Subnet</a></li>
-                <li role="presentation" class="active"><a show-tab href="#tabIP">IP Address</a></li>
-                <li role="presentation"><a show-tab href="#tabFile">Add From File</a></li>
+                <li role="presentation"><a show-tab id="subnet" href="#tabSubnet">Subnet</a></li>
+                <li role="presentation" class="active"><a show-tab id="ip" href="#tabIP">IP Address</a></li>
+                <li role="presentation"><a show-tab id="file" href="#tabFile">Add From File</a></li>
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane" id="tabSubnet">
                     <form class="modal-form">
                         <div class="form-group">
                             <label for="addSubnet">Subnet</label>
-                            <input type="text" class="form-control" id="addSubnet" ui-mask="999.999.999" />
+                            <input type="text" class="form-control" id="addSubnet" ng-model="data.mask" />
                         </div>
                         <div class="form-group">
                             <label for="addSubnetDescription">Description</label>
-                            <input type="text" class="form-control" id="addSubnetDescription" placeholder="description">
+                            <input type="text" class="form-control" id="addSubnetDescription" placeholder="description" ng-model="data.description" />
                         </div>
                     </form>
                 </div>
@@ -58,7 +58,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Submit</button>
+            <button type="button" class="btn btn-primary" ng-click="">Submit</button>
         </div>
     </div>
 </div>

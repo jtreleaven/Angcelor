@@ -2,7 +2,7 @@
 
 var browse = angular.module('BrowseServices', ['ngResource']);
 
-browse.factory('Subnet', ['$resource',
+browse.factory('Browse', ['$resource',
     function($resource) {
         return $resource('app/subnets/subnets.json', {}, {
             query: {method: 'GET', isArray: true}
