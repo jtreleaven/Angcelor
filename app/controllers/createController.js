@@ -1,5 +1,4 @@
-
-angcelor.controller('createCtrl', ['$scope', 'Subnet', function($scope, Subnet) {
+angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', function($scope, Subnet) {
 
     var tabs = ['subnet', 'ip', 'file'];
 
@@ -11,4 +10,9 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', function($scope, Subnet) 
         data.net = octets[2];
         var subnet = Subnet.build(data);
     };
+
+    $scope.selectedTab = 2;
+    $scope.createIpAddress = function(data){
+    	var ipAddress = ipAddress.build(data);
+    }
 }])
