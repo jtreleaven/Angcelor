@@ -3,8 +3,8 @@
 // AngularJS stub file
 var angcelor = angular.module("angcelor", [
     'ngRoute',
+    'ngResource',
     'restangular',
-    'BrowseServices',
     'ui.layout',
     'ui.utils'
 ]);
@@ -16,11 +16,13 @@ angcelor.config(function($routeProvider, RestangularProvider) {
         controller: 'browseCtrl'
     })
         .otherwise({redirectTo: '/browse'});
-    RestangularProvider.setBaseUrl('http://localhost:8080/'); // Base URL for development
+    RestangularProvider.setBaseUrl('/api'); // Base URL for api server
     RestangularProvider.setDefaultHttpFields({
         useXDomain: true,
         withCredentials: true
     });
+
+    // Setting Default requested type as JSON
     RestangularProvider.setDefaultHeaders({
         'common': {
             'accept': 'application/json',

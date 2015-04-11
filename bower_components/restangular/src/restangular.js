@@ -310,7 +310,7 @@ module.provider('Restangular', function() {
 
 
             /**
-             * Request interceptor is called before sending an object to the server.
+             * Request interceptor is called before sending an object to the app.
              */
              config.requestInterceptors = config.requestInterceptors || [];
 

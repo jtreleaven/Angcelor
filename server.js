@@ -1,15 +1,39 @@
 
 /**
  * Created by jeff on 3/30/15.
- * Web server for live demo and continued updates and testing.
+ * Web app for live demo and continued updates and testing.
  */
 
 var express = require('express');
+var fs = require("fs");
+
 var app = express();
 
-app.set('port', (process.env.PORT || 8000));
-app.use(express.static(__dirname));
+var controllers = {};
 
+controllers_path = process.cwd() + '/api/controllers';
+fs.readdirSync(controllers_path).forEach(function (file) {
+    if (file.indexOf('.js') != -1) {
+        controllers[file.split('.')[0]] = require(controllers_path + '/' + file);
+    }
+});
+
+// Subnet actions start
+app.get("/api/subnets", controllers.subnetController.getAllSubnets);
+app.get("/api/subnets/:id", controllers.subnetController.getSubnet);
+app.post("/api/subnets", controllers.subnetController.createSubnet);
+app.delete("/api/subnets/:id", controllers.subnetController.deleteSubnet);
+// End of Subnet actions
+
+// IP Address actions start
+app.get("/api/ip/:id", controllers.ipAddressController.getAllIPAddressesInSubnet);
+app.post("/api/ip", controllers.ipAddressController.createIPAddress);
+app.delete("/api/ip/:ip",controllers.ipAddressController.deleteIPAddress);
+// End of IP Address actions
+
+app.set('port', (process.env.PORT || 8000));
+
+app.use(express.static(__dirname));
 app.get('/', function(request, response) {
     response.sendFile('index.html', {root: __dirname});
 });

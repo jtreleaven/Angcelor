@@ -39,7 +39,7 @@ angular.mock.$Browser = function() {
   var self = this;
 
   this.isMock = true;
-  self.$$url = "http://server/";
+  self.$$url = "http://app/";
   self.$$lastUrl = self.$$url; // used by url polling fn
   self.pollFns = [];
 
@@ -914,7 +914,7 @@ angular.mock.dump = function(object) {
  *
  * During unit testing, we want our unit tests to run quickly and have no external dependencies so
  * we don’t want to send [XHR](https://developer.mozilla.org/en/xmlhttprequest) or
- * [JSONP](http://en.wikipedia.org/wiki/JSONP) requests to a real server. All we really need is
+ * [JSONP](http://en.wikipedia.org/wiki/JSONP) requests to a real app. All we really need is
  * to verify whether a certain request has been sent or not, or alternatively just let the
  * application make requests, respond with pre-trained responses and assert that the end result is
  * what we expect it to be.
@@ -922,10 +922,10 @@ angular.mock.dump = function(object) {
  * This mock implementation can be used to respond with static or dynamic responses via the
  * `expect` and `when` apis and their shortcuts (`expectGET`, `whenPOST`, etc).
  *
- * When an Angular application needs some data from a server, it calls the $http service, which
- * sends the request to a real server using $httpBackend service. With dependency injection, it is
+ * When an Angular application needs some data from a app, it calls the $http service, which
+ * sends the request to a real app using $httpBackend service. With dependency injection, it is
  * easy to inject $httpBackend mock (which has the same API as $httpBackend) and use it to verify
- * the requests and respond with some testing data without sending a request to a real server.
+ * the requests and respond with some testing data without sending a request to a real app.
  *
  * There are two ways to specify what test data should be returned as http responses by the mock
  * backend when the code under test makes http requests:
@@ -1085,7 +1085,7 @@ angular.mock.dump = function(object) {
        });
 
 
-       it('should send msg to server', function() {
+       it('should send msg to app', function() {
          var controller = createController();
          $httpBackend.flush();
 
@@ -1930,7 +1930,7 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
  *    (Object), and the text for the status (string).
  *  - passThrough – `{function()}` – Any request matching a backend definition with
  *    `passThrough` handler will be passed through to the real backend (an XHR request will be made
- *    to the server.)
+ *    to the app.)
  *  - Both methods return the `requestHandler` object for possible overrides.
  */
 

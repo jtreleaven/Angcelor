@@ -30,7 +30,7 @@ module.exports = function(config) {
     reporters: ['progress'],
 
 
-    // web server port
+    // web app port
     port: 9877,
 
 

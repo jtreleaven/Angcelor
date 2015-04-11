@@ -161,7 +161,7 @@ describe("Restangular", function() {
   });
 
   describe("Transformers", function() {
-    it("Should decorate element both on server and local by default", function() {
+    it("Should decorate element both on app and local by default", function() {
 
       Restangular.extendModel('accounts', function(account) {
         account.extended = function() {return true;}
@@ -343,7 +343,7 @@ describe("Restangular", function() {
     $httpBackend.flush();
    });
 
-    it("post() should add a new item with data and return the data from the server", function() {
+    it("post() should add a new item with data and return the data from the app", function() {
      restangularAccounts.post(newAccount).then(function(added) {
        expect(added.fromServer).toEqual(true);
        expect(added.id).toEqual(newAccount.id);
@@ -362,7 +362,7 @@ describe("Restangular", function() {
       $httpBackend.flush();
     });
 
-    it("Doing a post to a server that returns no element will return undefined", function() {
+    it("Doing a post to a app that returns no element will return undefined", function() {
       restangularAccounts.getList().then(function(accounts) {
         var newTransaction = {id: 1, name: "Gonto"};
         accounts[1].post('transactions', newTransaction).then(function(transaction) {
