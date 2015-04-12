@@ -1,26 +1,14 @@
 
 angcelor.factory('Subnet', function() {
 
-    function Subnet(name, net, mask, description) {
+    function Subnet(subnet_id, name, net, mask, description) {
+        this.subnet_id = subnet_id;
         this.name = name;
         this.net = net;
         this.mask = mask;
         this.description = description;
+        return this;
     }
-
-
-    /*
-     * Gives a instance method to build the Subnet
-     * object as if it was a static method.
-     */
-    Subnet.build = function(data) {
-        return new Subnet(
-            data.name,
-            data.net,
-            data.mask,
-            data.description
-        );
-    };
 
     return Subnet;
 });

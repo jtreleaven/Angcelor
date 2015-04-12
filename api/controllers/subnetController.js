@@ -57,18 +57,12 @@ exports.getSubnet = function(req, res, next) {
 
 exports.createSubnet = function(req, res, next) {
     pool.getConnection(function(err, conn) {
-        var _id = getAvailableID();
-        conn.query("INSERT INTO subnet SET ?", req.params, function(err, result) {
+        conn.query("INSERT INTO subnet SET ?", [req.params], function(err, result) {
             if (err) {
-                res.json({
-                    type: false,
-                    data: _id
-                });
+                return next(err);
             } else {
-                res.json({
-                    type: true,
-                    data: result
-                });
+                res.send(result);
+                return next();
             }
         });
         conn.release();
@@ -76,18 +70,35 @@ exports.createSubnet = function(req, res, next) {
 };
 
 exports.deleteSubnet = function(req, res, next) {
-    pool.getConnection(function(err, conn) {
+    pool.getConnection(function(error, conn) {
         conn.query("DELETE FROM subnet WHERE subnet_id=?", [req.params.id], function(err, result) {
-            if (err) throw err;
+            if (err) {
+                return next(err);
+            }
 
-            res.json({
-                type: true,
-                data: result
-            });
+            res.send(result);
+            return next();
         });
         conn.release();
     });
 };
+
+exports.getAvailableID = function(req, res, next) {
+    pool.getConnection(function(error, conn) {
+        if (error) {
+            return next(error);
+        }
+        conn.query("SELECT * FROM subnet ORDER BY subnet_id DESC LIMIT 1", function(err, subnet) {
+            if (err) {
+                return next(err);
+            }
+
+            res.send({"available_id": subnet[0].subnet_id + 1});
+            return next();
+        });
+        conn.release();
+    });
+}
 
 
 
