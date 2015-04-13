@@ -37,9 +37,9 @@ exports.getAllSubnets = function(req, res, next) {
 };
 
 exports.getSubnet = function(req, res, next) {
-    pool.getConnection(function(err, conn) {
-        if (err) {
-            return next(err);
+    pool.getConnection(function(error, conn) {
+        if (error) {
+            return next(error);
         }
         conn.query("SELECT * FROM subnet WHERE subnet_id=?", [req.params.id], function(err, rows) {
             if (err) {
@@ -56,12 +56,22 @@ exports.getSubnet = function(req, res, next) {
 };
 
 exports.createSubnet = function(req, res, next) {
-    pool.getConnection(function(err, conn) {
-        conn.query("INSERT INTO subnet SET ?", [req.params], function(err, result) {
+    pool.getConnection(function(error, conn) {
+        if (error) {
+            return next(error);
+        }
+        conn.query("INSERT INTO subnet SET ?", req.body, function(err, result) {
             if (err) {
+                res.send({
+                    result: err,
+                    status: "failed"
+                });
                 return next(err);
             } else {
-                res.send(result);
+                res.send({
+                    result: result,
+                    status: "success"
+                });
                 return next();
             }
         });
@@ -71,12 +81,22 @@ exports.createSubnet = function(req, res, next) {
 
 exports.deleteSubnet = function(req, res, next) {
     pool.getConnection(function(error, conn) {
+        if (error) {
+            return next(error);
+        }
         conn.query("DELETE FROM subnet WHERE subnet_id=?", [req.params.id], function(err, result) {
             if (err) {
+                res.send({
+                    result: err,
+                    status: "failed"
+                });
                 return next(err);
             }
 
-            res.send(result);
+            res.send({
+                result: result,
+                status: "success"
+            });
             return next();
         });
         conn.release();

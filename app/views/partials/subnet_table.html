@@ -3,12 +3,23 @@
         <tr>
             <th>Subnet</th>
             <th>Description</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="subnet in subnets" ng-class="{'selected_subnet': subnet.selected}" ng-click="changeSelectedSubnet($index)" >
             <td>{{ subnet.name }}</td>
             <td>{{ subnet.description }}</td>
+            <td nowrap>
+                <div ng-show="subnet.selected">
+                    <button type="button" class="btn btn-default" ng-click="editSubnet(subnet)">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" ng-click="deleteSubnet(subnet.subnet_id)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </div>
+            </td>
         </tr>
     </tbody>
 </table>

@@ -12,19 +12,20 @@
             </ul>
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane" id="tabSubnet">
-                    <form class="modal-form">
+                    <form class="modal-form" ng-show="!actionComplete">
                         <div class="form-group">
                             <label for="addSubnet">Subnet</label>
-                            <input type="text" class="form-control" id="addSubnet" ng-model="data.mask" />
+                            <input type="text" class="form-control" id="addSubnet" placeholder="999.999.999 (e.g. 10.120.200)" ng-model="data.mask" />
                         </div>
                         <div class="form-group">
                             <label for="addSubnetDescription">Description</label>
                             <input type="text" class="form-control" id="addSubnetDescription" placeholder="description" ng-model="data.description" />
                         </div>
                     </form>
+                    <div class="modal-form" ng-include="'app/views/partials/successAlert.html'" ng-show="actionComplete && actionSuccessful"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane active" id="tabIP">
-                    <form class="modal-form">
+                    <form class="modal-form" ng-show="!actionComplete">
                         <div class="form-group">
                             <label for="inSubnet">Subnet</label>
                             <input type="text" class="form-control" id="inSubnet" placeholder="Subnet ID (e.g. 1, 2, 3 ...)" ng-model="data.subnet" />
@@ -49,18 +50,16 @@
                             <label for="addDeviceType">Device Type</label>
                             <input type="text" class="form-control" id="addDeviceType" placeholder="server" ng-model="data.deviceType" />
                         </div>
-                         <div class="form-group">
-                            <label for="addMonitored">Monitored</label>
-                            <input type="checkbox" class="form-control" id="addMonitored" ng-model="data.monitored" />
-                        </div>
                     </form>
+                    <div class="modal-form" ng-include="'app/views/partials/successAlert.html'" ng-show="actionComplete && actionSuccessful"></div>
                 </div>
                 <div role="tabpanel" class="tab-pane" id="tabFile">
-                    <form class="modal-form">
+                    <form class="modal-form" ng-show="!actionComplete">
                         <div class="text-center">
                             <button type="button" class="btn btn-default">browse</button>
                         </div>
                     </form>
+                    <div class="modal-form" ng-include="'app/views/partials/successAlert.html'" ng-show="actionComplete && actionSuccessful"></div>
                 </div>
             </div>
         </div>

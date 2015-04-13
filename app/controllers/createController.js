@@ -3,19 +3,29 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
     function($scope, Subnet, ipAddress, SubnetAPI, IP_AddressAPI, CheckAPI) {
 
         var tabs = ['subnet', 'ip', 'file'];
-
+        $scope.data = {};
         $scope.selectedTab = 1;
+        $scope.actionComplete = false;
+        $scope.actionSuccessful = false;
 
         function createSubnet(data) {
-            console.log("The createSubnet function has been called.");
             var octets = data.mask.split('.');
             var name = octets[2];
             var net = octets[2];
             CheckAPI.one("subnets").get().then(function(result) {
                 var _id = result.available_id;
-                console.log(_id);
                 var subnet = new Subnet(_id, name, net, data.mask, data.description);
-                SubnetAPI.post(subnet);
+                SubnetAPI.post(subnet).then(function(result) {
+                    if (result.status == 'failed') {
+                        alert("Creation failed!");
+                        $scope.actionComplete = true;
+                    } else {
+                        $scope.data = {};
+                        $scope.actionComplete = true;
+                        $scope.actionSuccessful = true;
+                    }
+
+                });
             });
         }
 
@@ -25,8 +35,6 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
         }
 
         $scope.submitAdd = function(data) {
-            console.log("The submitAdd function has been called.");
-            console.log("Current Selected Subnet: " + $scope.selectedTab);
             var tab = tabs[$scope.selectedTab];
             if (tab == 'subnet') {
                 createSubnet(data);

@@ -51,9 +51,7 @@ body {
     background-color: rgba(253, 55, 2, 0.70);
 }
 
-
-
-#subnet_table {
+#subnet_table > tbody > tr {
     cursor: pointer;
 }
 
@@ -64,7 +62,6 @@ body {
 #subnet_table > tbody > tr:active {
     background-color: rgba(253, 45, 19, 0.70);
 }
-
 
 /* Modal Styles */
 
