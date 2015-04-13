@@ -8,7 +8,7 @@ search.filter('dataFilter', function()
 				var found = false;
 				Object.keys(ipAddress).some(function(key){
 					found = person[key].search(regexp) > -1;
-					return found
+					return found;
 				})
 			})
 		}
