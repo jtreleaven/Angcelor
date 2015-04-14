@@ -6,8 +6,6 @@
             <ui-layout options="{ flow : 'column' }">
                 <div ui-layout-container id="single-box-left" class="west-back">
                     <h2 class="sub-header">Subnets</h2>
-                    <label for="tableSearch">Search:</label>
-                    <input type="text" data-ng-model="tableSearch" placeholder="Search" />
                     <div ng-include="'app/views/partials/subnet_table.html'" class="table-container"></div>
                 </div>
 
@@ -19,7 +17,10 @@
         </div>
         <div ui-layout-container>
             <div class="row">
-                <button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
+                <!--<button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>-->
+                <label>Search Subnet: <input ng-model="searchSubnet"></label>
+                <label>Search Current IP: <input ng-model="searchText"></label>
+
                 <button id="add" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                 <div ng-include="'app/views/partials/advanced_search.html'" class="modal fade" id="advSearchModal" tabindex="-1" role="dialog" aria-labelledby="advSearchModalLabel" aria-hidden="true"></div>
                 <div ng-include="'app/views/partials/add.html'" class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true"></div>

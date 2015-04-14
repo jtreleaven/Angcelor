@@ -52,6 +52,7 @@ angcelor.controller("browseCtrl", ['$scope', 'Browse', 'SubnetAPI', 'IP_AddressA
             console.log(subnet);
         };
 
+
         $scope.deleteSubnet = function(subnet_id) {
             SubnetAPI.one(subnet_id).remove().then(function(result){
                 if (result.status == "failed") {
