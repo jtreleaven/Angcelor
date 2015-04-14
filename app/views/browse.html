@@ -6,6 +6,8 @@
             <ui-layout options="{ flow : 'column' }">
                 <div ui-layout-container id="single-box-left" class="west-back">
                     <h2 class="sub-header">Subnets</h2>
+                    <label for="tableSearch">Search:</label>
+                    <input type="text" data-ng-model="tableSearch" placeholder="Search" />
                     <div ng-include="'app/views/partials/subnet_table.html'" class="table-container"></div>
                 </div>
 
