@@ -36,6 +36,7 @@ app.get("/api/check/subnets", controllers.subnetController.getAvailableID);
 // End of the checkable section
 
 // IP Address actions start
+app.get("/api/ip", controllers.ipAddressController.getAllIP);
 app.get("/api/ip/:id", controllers.ipAddressController.getAllIPAddressesInSubnet);
 app.post("/api/ip", controllers.ipAddressController.createIPAddress);
 app.delete("/api/ip/:ip",controllers.ipAddressController.deleteIPAddress);
