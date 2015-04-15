@@ -6,21 +6,25 @@
             <ui-layout options="{ flow : 'column' }">
                 <div ui-layout-container id="single-box-left" class="west-back box">
                     <h2 class="sub-header">Subnets</h2>
+                    <input type="text" class="form-control fix-right fix-bottom" ng-model="searchSubnet" placeholder="Search Subnets..." />
+
                     <div ng-include="'app/views/partials/subnet_table.html'" class="table-container"></div>
                 </div>
 
                 <div ui-layout-container id="single-box-right" class="east-back box">
                     <h2 class="sub-header">IP Addresses</h2>
+                    <input type="text" class="form-control fix-left fix-bottom" ng-model="searchIP" placeholder="Search IP Addresses..." />
+
                     <div ng-include="'app/views/partials/ip_table.html'" class="table-container"></div>
                 </div>
             </ui-layout>
         </div>
         <div ui-layout-container>
             <div class="row">
-                <!--<button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>-->
-                <label>Subnets: <input ng-model="searchSubnet"></label>
-                <label>Current IP: <input ng-model="searchIP"></label>
-                <button type="button" class="btn btn-primary" ng-click="getAllIP()">Search All IP Addresses</button>
+                <button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
+                <!--<label>Subnets: <input ng-model="searchSubnet"></label>-->
+                <!--<label>Current IP: </label>-->
+                <!--<button type="button" class="btn btn-primary" ng-click="getAllIP()">Search All IP Addresses</button>-->
                 <button id="add" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                 <div ng-include="'app/views/partials/advanced_search.html'" class="modal fade" id="advSearchModal" tabindex="-1" role="dialog" aria-labelledby="advSearchModalLabel" aria-hidden="true"></div>
                 <div ng-include="'app/views/add.html'" class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true"></div>

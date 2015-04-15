@@ -6,7 +6,8 @@ var angcelor = angular.module("angcelor", [
     'ngResource',
     'restangular',
     'ui.layout',
-    'ui.utils'
+    'ui.utils',
+    'angular.filter'
 ]);
 
 angcelor.config(function($routeProvider, RestangularProvider) {

@@ -10,6 +10,24 @@ body {
     background-color: rgba(70, 70, 70, 0.75)
 }
 
+.fix-left {
+    margin-left: 8px;
+    width: calc(100% - 8px);
+}
+
+.fix-right {
+    margin-right: 8px;
+    width: calc(100% - 8px);
+}
+
+.fix-bottom {
+    margin-bottom: 6px;
+}
+
+.inline {
+    display: inline-flex;
+}
+
 .box {
     overflow-y: hidden;
 }
