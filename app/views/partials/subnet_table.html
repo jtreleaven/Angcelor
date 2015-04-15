@@ -7,7 +7,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="subnet in subnets" ng-class="{'selected_subnet': subnet.selected}" ng-click="changeSelectedSubnet($index)" >
+        <tr ng-repeat="subnet in subnets | filter:searchSubnet" ng-class="{'selected_subnet': subnet.selected}" ng-click="changeSelectedSubnet(subnets.indexOf(subnet))" >
             <td>{{ subnet.name }}</td>
             <td>{{ subnet.description }}</td>
             <td nowrap>
