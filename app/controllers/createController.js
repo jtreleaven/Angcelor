@@ -23,8 +23,8 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
                         $scope.data = {};
                         $scope.actionComplete = true;
                         $scope.actionSuccessful = true;
+                        $scope.$parent.subnets.push(subnet);
                     }
-
                 });
             });
         }
@@ -46,5 +46,11 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
                 // nothing here yet, maybe just using this for error reporting
             }
         };
+
+        $scope.resetForms = function() {
+            $scope.data = {};
+            $scope.actionComplete = false;
+            $scope.actionSuccessful = false;
+        }
     }
 ]);

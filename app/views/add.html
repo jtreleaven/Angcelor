@@ -1,0 +1,33 @@
+<div class="modal-dialog" ng-controller="createCtrl">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="resetForms()"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Add/Edit</h4>
+        </div>
+        <div class="modal-body">
+            <ul class="nav nav-tabs">
+                <li role="presentation"><a show-tab id="subnet" href="#tabSubnet">Subnet</a></li>
+                <li role="presentation" class="active"><a show-tab id="ip" href="#tabIP">IP Address</a></li>
+                <li role="presentation"><a show-tab id="file" href="#tabFile">Add From File</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane" id="tabSubnet">
+                    <div ng-include="'app/views/partials/subnetForm.html'" ng-show="!actionComplete"></div>
+                    <div class="modal-form" ng-include="'app/views/partials/successAlert.html'" ng-show="actionComplete && actionSuccessful"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane active" id="tabIP">
+                    <div ng-include="'app/views/partials/ipAddressForm.html'" ng-show="!actionComplete"></div>
+                    <div class="modal-form" ng-include="'app/views/partials/successAlert.html'" ng-show="actionComplete && actionSuccessful"></div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tabFile">
+                    <div ng-include="'app/views/partials/fileForm.html'" ng-show="!actionComplete"></div>
+                    <div class="modal-form" ng-include="'app/views/partials/successAlert.html'" ng-show="actionComplete && actionSuccessful"></div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="resetForms()">Close</button>
+            <button type="button" class="btn btn-primary" ng-click="submitAdd(data)">Submit</button>
+        </div>
+    </div>
+</div>

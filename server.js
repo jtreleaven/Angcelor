@@ -10,10 +10,8 @@ var bodyParser = require('body-parser');
 
 var app = express();
 
-app.use(bodyParser.urlencoded({
-    extended: true
-}));
-app.use(bodyParser.json());
+app.use(bodyParser.json()); // for parsing application/json
+app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 
 var controllers = {};
 
@@ -29,6 +27,7 @@ app.get("/api/subnets", controllers.subnetController.getAllSubnets);
 app.get("/api/subnets/:id", controllers.subnetController.getSubnet);
 app.post("/api/subnets", controllers.subnetController.createSubnet);
 app.delete("/api/subnets/:id", controllers.subnetController.deleteSubnet);
+app.put("/api/subnets", controllers.subnetController.updateSubnet);
 // End of Subnet actions
 
 // Checkable actions section

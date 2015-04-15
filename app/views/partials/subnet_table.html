@@ -12,10 +12,10 @@
             <td>{{ subnet.description }}</td>
             <td nowrap>
                 <div ng-show="subnet.selected">
-                    <button type="button" class="btn btn-default" ng-click="editSubnet(subnet)">
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal" ng-click="editSubnet(subnet)">
                         <span class="glyphicon glyphicon-edit"></span>
                     </button>
-                    <button type="button" class="btn btn-default" ng-click="deleteSubnet(subnet.subnet_id)">
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteConfirm" ng-click="setDelete(subnet)">
                         <span class="glyphicon glyphicon-trash"></span>
                     </button>
                 </div>

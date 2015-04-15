@@ -1,5 +1,5 @@
 body {
-    background-color: rgba(5, 102, 100, 0.20);
+    background-color: rgba(55, 55, 55, 0.80)
 }
 
 .ui-splitbar {
@@ -8,6 +8,10 @@ body {
 
 .ui-splitbar:hover {
     background-color: rgba(70, 70, 70, 0.75)
+}
+
+.box {
+    overflow-y: hidden;
 }
 
 #background {

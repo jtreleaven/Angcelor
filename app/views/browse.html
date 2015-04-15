@@ -4,12 +4,12 @@
     <div ui-layout class="row browse-content layout-mock">
         <div ui-layout-container size="75%">
             <ui-layout options="{ flow : 'column' }">
-                <div ui-layout-container id="single-box-left" class="west-back">
+                <div ui-layout-container id="single-box-left" class="west-back box">
                     <h2 class="sub-header">Subnets</h2>
                     <div ng-include="'app/views/partials/subnet_table.html'" class="table-container"></div>
                 </div>
 
-                <div ui-layout-container id="single-box-right" class="east-back">
+                <div ui-layout-container id="single-box-right" class="east-back box">
                     <h2 class="sub-header">IP Addresses</h2>
                     <div ng-include="'app/views/partials/ip_table.html'" class="table-container"></div>
                 </div>
@@ -20,7 +20,9 @@
                 <button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
                 <button id="add" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                 <div ng-include="'app/views/partials/advanced_search.html'" class="modal fade" id="advSearchModal" tabindex="-1" role="dialog" aria-labelledby="advSearchModalLabel" aria-hidden="true"></div>
-                <div ng-include="'app/views/partials/add.html'" class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true"></div>
+                <div ng-include="'app/views/add.html'" class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true"></div>
+                <div ng-include="'app/views/edit.html'" class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true"></div>
+                <div ng-include="'app/views/partials/deleteSubnetConfirmation.html'" class="modal fade" id="deleteConfirm" tabindex="-1" role="dialog" aria-labelledby="deleteConfirmLabel" aria-hidden="true"></div>
             </div>
         </div>
     </div>

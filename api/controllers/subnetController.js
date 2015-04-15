@@ -84,7 +84,8 @@ exports.deleteSubnet = function(req, res, next) {
         if (error) {
             return next(error);
         }
-        conn.query("DELETE FROM subnet WHERE subnet_id=?", [req.params.id], function(err, result) {
+
+        conn.query("DELETE FROM subnet WHERE subnet_id = ?", [req.params.id], function(err, result) {
             if (err) {
                 res.send({
                     result: err,
@@ -118,7 +119,38 @@ exports.getAvailableID = function(req, res, next) {
         });
         conn.release();
     });
-}
+};
+
+exports.updateSubnet = function(req, res, next) {
+    pool.getConnection(function(error, conn) {
+        if (error) {
+            return next(error);
+        }
+
+        var subnet = req.body;
+
+        conn.query(
+            "UPDATE subnet SET name = ?, net = ?, mask = ?, description = ? WHERE subnet_id = ?",
+            [subnet.name, subnet.net, subnet.mask, subnet.description, subnet.subnet_id],
+            function(err, result) {
+                if (err) {
+                    res.send({
+                        status: 'failed',
+                        error: err
+                    });
+                    return next(err);
+                }
+
+                res.send({
+                    status: 'success',
+                    result: result
+                });
+                return next();
+            }
+        );
+        conn.release();
+    });
+};
 
 
 
