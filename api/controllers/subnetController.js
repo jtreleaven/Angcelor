@@ -3,13 +3,14 @@
  */
 
 var _ = require("underscore");
+var config = require("../../config/config");
 
 var mysql = require("mysql");
 var pool = mysql.createPool({
-    host: 'localhost',
-    user: 'root',
-    password: 'Jmt2347',
-    database: 'arcelor_ipam'
+    host: config.db.host,
+    user: config.db.user,
+    password: config.db.password,
+    database: config.db.name
 });
 
 models_path = process.cwd() + '/api/models';

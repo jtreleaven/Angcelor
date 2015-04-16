@@ -2,7 +2,7 @@
 <div id="background" class="container">
 
     <div ui-layout class="row browse-content layout-mock">
-        <div ui-layout-container size="75%">
+        <div ui-layout-container size="75%" min-size="75%">
             <ui-layout options="{ flow : 'column' }">
                 <div ui-layout-container id="single-box-left" class="west-back box">
                     <h2 class="sub-header">Subnets</h2>
@@ -12,14 +12,14 @@
                 </div>
 
                 <div ui-layout-container id="single-box-right" class="east-back box">
-                    <h2 class="sub-header">IP Addresses</h2>
+                    <h2 class="sub-header fix-left">IP Addresses</h2>
                     <input type="text" class="form-control fix-left fix-bottom" ng-model="searchIP" placeholder="Search IP Addresses..." />
 
                     <div ng-include="'app/views/partials/ip_table.html'" class="table-container"></div>
                 </div>
             </ui-layout>
         </div>
-        <div ui-layout-container>
+        <div ui-layout-container max-size="25%">
             <div class="row">
                 <button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
                 <!--<label>Subnets: <input ng-model="searchSubnet"></label>-->
