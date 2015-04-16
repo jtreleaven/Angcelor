@@ -6,6 +6,7 @@
         </div>
         <div class="modal-body">
             <div ng-include="'app/views/partials/subnetForm.html'" ng-show="showSubnet && !updateComplete"></div>
+            <div ng-include="'app/views/partials/ipAddressForm.html'" ng-show="showIP && !updateComplete"></div>
             <div ng-include="'app/views/partials/successAlert.html'" ng-show="updateComplete"></div>
         </div>
         <div class="modal-footer">

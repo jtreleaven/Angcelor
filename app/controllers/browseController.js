@@ -30,6 +30,13 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
 
         real_initialize();
 
+        $scope.getSelectedSubnet = function() {
+            var subnet = _.find($scope.subnets, function(subnet) {
+                return subnet.selected;
+            });
+            return subnet;
+        };
+
         $scope.getAllIP = function() {
             SubnetAPI.getList().then(function (subnets) {
                 $scope.subnets = subnets;
@@ -44,6 +51,16 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
             deselectSubnet();
             $scope.subnets[index].selected = true;
             updateIPAddrs();
+        };
+
+        $scope.broadcastCreate = function() {
+            var subnet = $scope.getSelectedSubnet();
+            $scope.$broadcast('create', subnet);
+        };
+
+        $scope.editIpAddress = function(ip_addr) {
+            $scope.$broadcast('ip', ip_addr);
+            $scope.$broadcast('create', $scope.getSelectedSubnet());
         };
 
         $scope.editSubnet = function(subnet) {

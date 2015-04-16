@@ -4,7 +4,7 @@
             <th>IP Address</th>
             <th>Monitored</th>
             <th>Description</th>
-            <th>Type</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -12,7 +12,16 @@
             <td>{{ ip_addr.ipv4_address }}</td>
             <td class="column-center"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="ip_addr.monitor > 0"></span></td>
             <td>{{ ip_addr.description  }}</td>
-            <td>{{ ip_addr.device_type }}</td>
+            <td nowrap>
+                <div>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal" ng-click="editIpAddress(ip_addr)">
+                        <span class="glyphicon glyphicon-edit"></span>
+                    </button>
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteConfirm" ng-click="setDelete(ip_addr)">
+                        <span class="glyphicon glyphicon-trash"></span>
+                    </button>
+                </div>
+            </td>
         </tr>
     </tbody>
 </table>

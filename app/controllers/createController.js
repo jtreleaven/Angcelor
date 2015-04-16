@@ -30,9 +30,13 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
         }
 
         function createIpAddress(data){
-            var ip_addr = new ipAddress(data.address, data.subnet, data.address, data.monitored, data.description, data.deviceType);
+            var ip_addr = new ipAddress(data.address, data.subnet.subnet_id, data.address, data.monitored, data.description, data.deviceType);
             IP_AddressAPI.post(ip_addr);
         }
+
+        $scope.$on('create', function(event, data) {
+            $scope.data.subnet = data;
+        });
 
         $scope.submitAdd = function(data) {
             var tab = tabs[$scope.selectedTab];

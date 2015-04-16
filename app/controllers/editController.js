@@ -6,6 +6,7 @@ angcelor.controller('editCtrl', ['$scope',
     function($scope) {
         $scope.data = {};
         $scope.showSubnet = false;
+        $scope.showIP = false;
         $scope.editType = '';
         $scope.updateComplete = false;
 
@@ -19,6 +20,19 @@ angcelor.controller('editCtrl', ['$scope',
                 }
             });
         }
+
+        $scope.$on('ip', function(event, data) {
+            $scope.editType = 'IP Address';
+            $scope.data = data;
+            $scope.showIP = true;
+        });
+
+        /**
+         * This is called as a secondary call after the 'ip' event.
+         */
+        $scope.$on('create', function(event, data) {
+            $scope.data.subnet = data;
+        });
 
         /**
          * This handles the broadcast from the parent browseCtrl
@@ -34,6 +48,7 @@ angcelor.controller('editCtrl', ['$scope',
         $scope.cancelChanges = function() {
             $scope.data = {};
             $scope.showSubnet = false;
+            $scope.showIP = false;
             $scope.editType = '';
             $scope.updateComplete = false;
         };

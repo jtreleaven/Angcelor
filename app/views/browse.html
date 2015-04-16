@@ -19,13 +19,13 @@
                 </div>
             </ui-layout>
         </div>
-        <div ui-layout-container max-size="25%">
+        <div ui-layout-container>
             <div class="row">
                 <button id="advSearch" type="button" class="btn btn-default pull-left" data-toggle="modal" data-target="#advSearchModal">Advanced Search</button>
                 <!--<label>Subnets: <input ng-model="searchSubnet"></label>-->
                 <!--<label>Current IP: </label>-->
                 <!--<button type="button" class="btn btn-primary" ng-click="getAllIP()">Search All IP Addresses</button>-->
-                <button id="add" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+                <button id="add" type="button" class="btn btn-default pull-right" data-toggle="modal" data-target="#addModal" ng-click="broadcastCreate()"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
                 <div ng-include="'app/views/partials/advanced_search.html'" class="modal fade" id="advSearchModal" tabindex="-1" role="dialog" aria-labelledby="advSearchModalLabel" aria-hidden="true"></div>
                 <div ng-include="'app/views/add.html'" class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true"></div>
                 <div ng-include="'app/views/edit.html'" class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="editModalLabel" aria-hidden="true"></div>
