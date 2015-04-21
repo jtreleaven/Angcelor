@@ -31,7 +31,17 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
 
         function createIpAddress(data){
             var ip_addr = new ipAddress(data.address, data.subnet.subnet_id, data.address, data.monitored, data.description, data.deviceType);
-            IP_AddressAPI.post(ip_addr);
+            IP_AddressAPI.post(ip_addr).then(function(result) {
+                if (result.status == 'failed') {
+                    alert("Creation failed!");
+                    $scope.actionComplete = true;
+                } else {
+                    $scope.data = {};
+                    $scope.actionComplete = true;
+                    $scope.actionSuccessful = true;
+                    $scope.$parent.ip_addrs.push(ip_addr);
+                }
+            });
         }
 
         $scope.$on('create', function(event, data) {
