@@ -68,7 +68,6 @@ exports.searchAllIP = function(req, res) {
     .query(query = req)
     .end(function(err, ids){
         if (err) throw err;
-        console.log('Search results for "%s":', query);
         ids.forEach(function(id){
           console.log('  - %s', strs[id]);
           foundIP.push(id);
