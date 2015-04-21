@@ -1,7 +1,7 @@
 /**
  * Created by jeff on 4/7/15.
  */
-
+var strs = [];
 var _ = require("underscore");
 var config = require('../../config/config');
 
@@ -21,10 +21,12 @@ exports.getAllIP = function(req, res, next) {
         if (err) {
             return next(err);
         }
-
+        strs = [];
         var ip_addrs = _.map(rows, function(row) {
+            strs.push(row.name + " " + row.description);
             return new ip.IP_Address(row.ipv4_address, row.in_subnet, row.name, row.dns, row.description, row.device_type, row.monitor);
         });
+        var search = reds.createSearch('ip');
         res.send(ip_addrs);
         return next();
     });
@@ -58,6 +60,23 @@ exports.createIPAddress = function(req, res, next) {
             });
         }
     });
+};
+
+exports.searchAllIP = function(req, res) {
+    var foundIP = [];
+    search
+    .query(query = req)
+    .end(function(err, ids){
+        if (err) throw err;
+        console.log('Search results for "%s":', query);
+        ids.forEach(function(id){
+          console.log('  - %s', strs[id]);
+          foundIP.push(id);
+      });
+        res.send(foundIP);
+        process.exit();
+    });
+
 };
 
 exports.deleteIPAddress = function(req, res, next) {

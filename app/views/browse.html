@@ -13,7 +13,8 @@
 
                 <div ui-layout-container id="single-box-right" class="east-back box">
                     <h2 class="sub-header fix-left">IP Addresses</h2>
-                    <input type="text" class="form-control fix-left fix-bottom" ng-model="searchIP" placeholder="Search IP Addresses..." />
+                    <input type="text" class="form-control fix-left fix-bottom" ng-model="searchIP" placeholder="Search current Subnet..." />
+                    <input type="text" class="form-control fix-left fix-bottom" ng-model="searchAllIP" placeholder="Search all IP Addresses..." />
 
                     <div ng-include="'app/views/partials/ip_table.html'" class="table-container"></div>
                 </div>
