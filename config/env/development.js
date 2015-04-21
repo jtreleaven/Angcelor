@@ -10,7 +10,7 @@ module.exports = {
         name: "arcelor_ipam",
         host: "localhost",
         user: "root",
-        password: "Jmt2347"
+        password: "brownie"
     }
 };
 

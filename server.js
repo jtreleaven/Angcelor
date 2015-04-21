@@ -32,6 +32,7 @@ app.put("/api/subnets", controllers.subnetController.updateSubnet);
 
 // Checkable actions section
 app.get("/api/check/subnets", controllers.subnetController.getAvailableID);
+app.get("/api/check/getallip", controllers.ipAddressController.searchAllIP);
 // End of the checkable section
 
 // IP Address actions start

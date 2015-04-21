@@ -5,10 +5,242 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5023bee2-816f-42e9-aa8b-87b2acde9935" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/config.js" afterPath="$PROJECT_DIR$/config/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/createController.js" afterPath="$PROJECT_DIR$/app/controllers/createController.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/.editorconfig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/.npmignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/.travis.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/CONTRIBUTING.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/History.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/LICENSE.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/Makefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/README.rdoc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/Readme.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/aggressive_tokenizer_es_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/aggressive_tokenizer_fr_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/aggressive_tokenizer_nl_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/aggressive_tokenizer_pt_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/aggressive_tokenizer_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/aggressive_tokenizer_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/tfidf/array_example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/bag.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/classification/basic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/classifiers/bayes_classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/lib/apparatus/classifier/bayes_classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/spec/bayes_classifier_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/bayes_classifier_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/classifiers/classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/lib/apparatus/classifier/classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/classifier_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/lib/commands.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/phonetics/compare.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/connection_breaker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/inflection/count.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/count_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/fr/count_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/count_inflector_fr_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/count_inflector_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/wordnet/data_file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/distance/dice_coefficient.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/dice_coefficient_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/phonetics/dm_soundex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/phonetics/double_metaphone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/double_metaphone_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/edge_weighted_digraph.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/form_set.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/lib/parser/hiredis.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/benchmarks/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/benchmarks/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/transliterators/ja/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/lib/apparatus/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/index.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/wordnet/index_file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/distance/jaro-winkler_distance.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/jaro-winkler_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/lib/parser/javascript.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/lib/apparatus/clusterer/kmeans.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/spec/kmeans_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/lancaster_rules.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/lancaster_stemmer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/lancaster_stemmer_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/distance/levenshtein_distance.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/levenshtein_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/line.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/line.segment.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/spec/line_segment_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/spec/line_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/linkedlist.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/classifiers/logistic_regression_classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/lib/apparatus/classifier/logistic_regression_classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/spec/logistic_regression_classifier_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/logistic_regression_classifier_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/longest_path_tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/longest_path_tree_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/matrix.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/spec/matrix_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/benchmarks/metaphone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/phonetics/metaphone.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/metaphone_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/tfidf/multiple_terms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/ngram_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/ngram_zh_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/ngrams/ngrams.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/ngrams/ngrams_zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/normalizers/normalizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/normalizers/normalizer_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/normalizer_ja_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/normalizers/normalizer_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/normalizer_no_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/normalizer_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/inflection/noun.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/inflection/noun_attach.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/noun_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/fr/noun_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/ja/noun_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/noun_inflector_fr_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/noun_inflector_ja_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/noun_inflector_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/io_spec/test_data/tfidf/one" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/phonetics/phonetic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/plane.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/spec/plane_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/polygon.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/polygon.vertex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/porter_stemmer_fr_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/porter_stemmer_it_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/porter_stemmer_no_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/porter_stemmer_pt_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/porter_stemmer_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/porter_stemmer_ru_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/porter_stemmer_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/present_verb_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/present_verb_inflector_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/lib/queue.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/lib/apparatus/classifier/randomforest_classifier.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/apparatus/spec/randomforest_classifier_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/classification/recall.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/lib/reds.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/regexp_tokenizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/normalizers/remove_diacritics.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/remove_diacritics_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/analyzers/sentence_analyzer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/sentence_analyzer_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/shortest_path_tree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/shortest_path_tree_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/inflectors/singular_plural_inflector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/snowball_fr.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/snowball_it.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/snowball_no.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/snowball_pt.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/benchmarks/soundex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/phonetics/soundex.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/soundex_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/phonetics/sounds_like.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/spellcheck/spellcheck.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/spellcheck_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/stemming/stem_corpus.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/stemming/stem_word.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/stemmer_ja_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/stemmer_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/stemmer_token_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/stopwords_zh.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/classification/store.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/sylvester.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/tfdif_testcorpus.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tfidf/tfidf.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/tfidf_document1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/tfidf_document2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/tfidf_document3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/tfidf_document4.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/tfidf/tfidf_example.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/io_spec/tfidf_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/tfidf_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/tfidf_teststopwords.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/lib/to_array.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/stemmers/token.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/examples/phonetics/tokenize_and_phoneticize.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/tokenizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/tokenizer_ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/tokenizer_ja_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/topological.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/transliterator_ja_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/tokenizers/treebank_word_tokenizer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/treebank_word_tokenizer_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/trie/trie.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/trie_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/io_spec/test_data/tfidf/two" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/redis/lib/util.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/util/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/lib/node-sylvester/vector.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/node_modules/sylvester/spec/vector_spec.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/wordnet/wordnet.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/lib/natural/wordnet/wordnet_file.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/spec/test_data/wordnet_mini.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/node_modules/reds/node_modules/natural/io_spec/wordnet_spec.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/browse.html" afterPath="$PROJECT_DIR$/app/views/browse.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/browseController.js" afterPath="$PROJECT_DIR$/app/controllers/browseController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/development.js" afterPath="$PROJECT_DIR$/config/env/development.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/api/controllers/ipAddressController.js" afterPath="$PROJECT_DIR$/api/controllers/ipAddressController.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/partials/ipAddressForm.html" afterPath="$PROJECT_DIR$/app/views/partials/ipAddressForm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/env/production.js" afterPath="$PROJECT_DIR$/config/env/production.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-filter/package.json" afterPath="$PROJECT_DIR$/node_modules/angular-filter/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/node_modules/angular-filter/node_modules/angular/package.json" afterPath="$PROJECT_DIR$/node_modules/angular-filter/node_modules/angular/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Angcelor.iws" />
@@ -36,9 +268,11 @@
       <file leaf-file-name="browseController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/browseController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="2000">
-              <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2100">
+              <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+              <folding>
+                <marker date="1429657321641" expanded="true" signature="1562:1832" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,11 +297,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ipAddressForm.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ipAddressForm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/partials/ipAddressForm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="620">
-              <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+            <state vertical-scroll-proportion="-1.4814814" vertical-offset="0" max-vertical-offset="620">
+              <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -113,10 +347,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ip_table.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ip_table.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/partials/ip_table.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.23460898" vertical-offset="59" max-vertical-offset="660">
               <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
               <folding />
             </state>
@@ -183,6 +417,7 @@
         <option value="$PROJECT_DIR$/config/env/production.js" />
         <option value="$PROJECT_DIR$/app/controllers/createController.js" />
         <option value="$PROJECT_DIR$/config/config.js" />
+        <option value="$PROJECT_DIR$/node_modules/angular-filter/package.json" />
         <option value="$PROJECT_DIR$/app/views/partials/ipAddressForm.html" />
       </list>
     </option>
@@ -233,6 +468,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Angcelor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angcelor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angcelor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angcelor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Angcelor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular-filter" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -512,7 +779,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -556,13 +823,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="260" max-vertical-offset="600">
-          <caret line="13" column="52" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/browse.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="340">
@@ -831,14 +1091,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/ip_table.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="200" max-vertical-offset="660">
-          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/env/production.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="641">
@@ -907,9 +1159,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/browseController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="2000">
-          <caret line="60" column="50" selection-start-line="60" selection-start-column="50" selection-end-line="60" selection-end-column="50" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="900" max-vertical-offset="2100">
+          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+          <folding>
+            <marker date="1429657321641" expanded="true" signature="1562:1832" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -921,10 +1175,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/angular-filter/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63394344" vertical-offset="839" max-vertical-offset="1460">
+          <caret line="61" column="11" selection-start-line="61" selection-start-column="11" selection-end-line="61" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/partials/ipAddressForm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49916804" vertical-offset="0" max-vertical-offset="620">
-          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
+        <state vertical-scroll-proportion="-1.4814814" vertical-offset="0" max-vertical-offset="620">
+          <caret line="2" column="44" selection-start-line="2" selection-start-column="44" selection-end-line="2" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/ip_table.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23460898" vertical-offset="59" max-vertical-offset="660">
+          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
           <folding />
         </state>
       </provider>
