@@ -1,7 +1,7 @@
 // AngularJS stub file
 
-angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI', 'CheckAPI',
-    function($scope, SubnetAPI, IP_AddressAPI, CheckAPI) {
+angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
+    function($scope, SubnetAPI, IP_AddressAPI) {
 
         function deselectSubnet() {
             for (var i = 0; i < $scope.subnets.length; i++) {
@@ -36,21 +36,6 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI', 'Chec
             });
             return subnet;
         };
-
-        $scope.getAllIP = function() {
-            SubnetAPI.getList().then(function (subnets) {
-                $scope.subnets = subnets;
-                $scope.subnets.selected = true;
-                IP_AddressAPI.one($scope.subnets.subnet_id).getList().then(function (ip_addrs) {
-                    $scope.ip_addrs = ip_addrs;
-                });
-            });
-        };
-        $scope.getAllIP = function(searchText) {
-            CheckAPI.getAllIP(searchText).getList.then(function (IPids){
-                    return IPids;
-                });
-            };
 
         $scope.changeSelectedSubnet = function(index) {
             deselectSubnet();
