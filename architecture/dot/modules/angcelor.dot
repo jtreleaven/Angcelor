@@ -1,0 +1,170 @@
+digraph dependencies {
+  node[shape="component",style="filled",colorscheme=paired12]
+
+
+    node[shape="component"]
+    "angcelor"[label="angcelor", color=1]
+
+    
+      "ngRoute"[label="ngRoute", color=1]
+      "ngRoute" -> "angcelor"
+    
+      "ngResource"[label="ngResource", color=1]
+      "ngResource" -> "angcelor"
+    
+      "restangular"[label="restangular", color=1]
+      "restangular" -> "angcelor"
+    
+      "ui.layout"[label="ui.layout", color=1]
+      "ui.layout" -> "angcelor"
+    
+      "ui.utils"[label="ui.utils", color=1]
+      "ui.utils" -> "angcelor"
+    
+      "angular.filter"[label="angular.filter", color=1]
+      "angular.filter" -> "angcelor"
+    
+
+
+    node[shape="ellipse"]
+    
+
+
+    
+      "browseCtrl"[label="browseCtrl", color=4]
+      "angcelor" -> "browseCtrl"
+    
+      "createCtrl"[label="createCtrl", color=4]
+      "angcelor" -> "createCtrl"
+    
+      "editCtrl"[label="editCtrl", color=4]
+      "angcelor" -> "editCtrl"
+    
+      "searchCtrl"[label="searchCtrl", color=4]
+      "angcelor" -> "searchCtrl"
+    
+
+    
+
+    
+      "ipAddress"[label="ipAddress", color=6]
+      "angcelor" -> "ipAddress"
+    
+      "Subnet"[label="Subnet", color=6]
+      "angcelor" -> "Subnet"
+    
+      "Browse"[label="Browse", color=6]
+      "angcelor" -> "Browse"
+    
+      "CheckAPI"[label="CheckAPI", color=6]
+      "angcelor" -> "CheckAPI"
+    
+      "IP_AddressAPI"[label="IP_AddressAPI", color=6]
+      "angcelor" -> "IP_AddressAPI"
+    
+      "SubnetAPI"[label="SubnetAPI", color=6]
+      "angcelor" -> "SubnetAPI"
+    
+
+    node[shape="cds"]
+    
+
+    
+      "showTab"[label="showTab", color=3]
+      "angcelor" -> "showTab"
+    
+
+
+
+
+
+
+
+
+
+    node[shape="ellipse",style="filled", color=9]
+    
+
+    
+      
+    
+
+
+    
+      
+        "$scope"[label="$scope"]
+        "$scope" -> "browseCtrl"
+      
+        "SubnetAPI"[label="SubnetAPI"]
+        "SubnetAPI" -> "browseCtrl"
+      
+        "IP_AddressAPI"[label="IP_AddressAPI"]
+        "IP_AddressAPI" -> "browseCtrl"
+      
+    
+      
+        "$scope"[label="$scope"]
+        "$scope" -> "createCtrl"
+      
+        "Subnet"[label="Subnet"]
+        "Subnet" -> "createCtrl"
+      
+        "ipAddress"[label="ipAddress"]
+        "ipAddress" -> "createCtrl"
+      
+        "SubnetAPI"[label="SubnetAPI"]
+        "SubnetAPI" -> "createCtrl"
+      
+        "IP_AddressAPI"[label="IP_AddressAPI"]
+        "IP_AddressAPI" -> "createCtrl"
+      
+        "CheckAPI"[label="CheckAPI"]
+        "CheckAPI" -> "createCtrl"
+      
+    
+      
+        "$scope"[label="$scope"]
+        "$scope" -> "editCtrl"
+      
+    
+      
+        "$scope"[label="$scope"]
+        "$scope" -> "searchCtrl"
+      
+        "CheckAPI"[label="CheckAPI"]
+        "CheckAPI" -> "searchCtrl"
+      
+    
+
+    
+
+    
+      
+    
+      
+    
+      
+        "$resource"[label="$resource"]
+        "$resource" -> "Browse"
+      
+    
+      
+        "Restangular"[label="Restangular"]
+        "Restangular" -> "CheckAPI"
+      
+    
+      
+        "Restangular"[label="Restangular"]
+        "Restangular" -> "IP_AddressAPI"
+      
+    
+      
+        "Restangular"[label="Restangular"]
+        "Restangular" -> "SubnetAPI"
+      
+    
+
+    
+
+
+}

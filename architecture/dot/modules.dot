@@ -1,0 +1,24 @@
+digraph dependencies {
+  node[shape="ellipse",style="filled",colorscheme=paired12]
+
+  
+    "angcelor"[label="angcelor", color=1]
+  
+
+  node[shape="ellipse",style="filled",color=2]
+  
+    
+      "ngRoute" -> "angcelor"
+    
+      "ngResource" -> "angcelor"
+    
+      "restangular" -> "angcelor"
+    
+      "ui.layout" -> "angcelor"
+    
+      "ui.utils" -> "angcelor"
+    
+      "angular.filter" -> "angcelor"
+    
+  
+}

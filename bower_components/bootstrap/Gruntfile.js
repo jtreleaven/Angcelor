@@ -47,7 +47,7 @@ module.exports = function (grunt) {
         options: {
           jshintrc: 'grunt/.jshintrc'
         },
-        src: ['Gruntfile.js', 'grunt/*.js']
+        src: ['Gruntfile.js.js', 'grunt/*.js']
       },
       src: {
         src: 'js/*.js'
@@ -65,7 +65,7 @@ module.exports = function (grunt) {
         config: 'js/.jscs.json',
       },
       grunt: {
-        src: ['Gruntfile.js', 'grunt/*.js']
+        src: ['Gruntfile.js.js', 'grunt/*.js']
       },
       src: {
         src: 'js/*.js'
