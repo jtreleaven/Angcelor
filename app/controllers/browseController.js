@@ -28,6 +28,12 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
             });
         }
 
+        function searchAllIPAddress(text)
+        {
+            var str = IP_AddressAPI.searchAllIP(text).getList();
+            console.log('%s', str[0]);
+        }
+
         real_initialize();
 
         $scope.getSelectedSubnet = function() {
