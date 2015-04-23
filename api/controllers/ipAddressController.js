@@ -3,7 +3,10 @@
  */
 var strs = [];
 var _ = require("underscore");
+var reds = require("reds");
 var config = require('../../config/config');
+var redis = require("redis"),
+        client = redis.createClient();
 
 var mysql = require("mysql");
 var conn = mysql.createConnection({
@@ -12,6 +15,9 @@ var conn = mysql.createConnection({
     password: config.db.password,
     database: config.db.name
 });
+client.on("error", function (err) {
+        console.log("Error " + err);
+    });
 
 models_path = process.cwd() + '/api/models';
 var ip = require(models_path + "/IpAddress.js");
@@ -64,17 +70,33 @@ exports.createIPAddress = function(req, res, next) {
 
 exports.searchAllIP = function(req, res) {
     var foundIP = [];
-    search
-    .query(query = req)
-    .end(function(err, ids){
-        if (err) throw err;
-        ids.forEach(function(id){
-          console.log('  - %s', strs[id]);
-          foundIP.push(id);
-      });
-        res.send(foundIP);
-        process.exit();
+    conn.query("SELECT * FROM ip_address", function(err, rows) {
+        if (err) {
+            return next(err);
+        }
+        strs = [];
+        var ip_addrs = _.map(rows, function(row) {
+            strs.push(row.name + " " + row.description);
+            return new ip.IP_Address(row.ipv4_address, row.in_subnet, row.name, row.dns, row.description, row.device_type, row.monitor);
+        });
+        var search = reds.createSearch('ip');
+
+        search
+            .query(query = req.body)
+            .end(function(err, ids){
+                if (err) throw err;
+                ids.forEach(function(id){
+                  console.log('  - %s', strs[id]);
+                  foundIP.push(id);
+              });
+                console.log(req.body);
+                res.send(foundIP);
+                process.exit();
+
+        
     });
+    });
+   
 
 };
 
