@@ -1,5 +1,6 @@
 <div class="modal-dialog" ng-controller="searchCtrl">
     <div class="modal-content">
+    <form name="advSearch" novalidate>
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <h4 class="modal-title" id="myModalLabel">Advanced Search</h4>
@@ -7,12 +8,13 @@
         <div class="modal-body">
             <div class="form-group">
                 <label for="search">Search...</label>
-                <input type="text" class="form-control fix-left fix-bottom" id="search" ng-model="searchAllIP" placeholder="Search all IP Addresses..." />
+                <input type="text" class="form-control fix-left fix-bottom" id="search" ng-model="searchAllIP" placeholder="Search all IP Addresses..." required/>
             </div>
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button id="advSearch2" type="button" class="btn btn-default pull-left" ng-click="searchAllIPAddress(search)">Test Button</button>
+            <button id="advSearch2" type="button" class="btn btn-default pull-left" ng-click="$parent.searchAllIPAddress(searchAllIP)" ng-disabled="advSearch.$invalid" data-dismiss="modal" >Search All</button>
         </div>
     </div>
+    </form>x
 </div>

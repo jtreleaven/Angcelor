@@ -33,8 +33,10 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI', 'Chec
 
         $scope.searchAllIPAddress = function(text)
         {
-            var str = CheckAPI.one('getallip').getList().then(function(result) {
-                console.log(result);
+            console.log(text);
+            var str = CheckAPI.post({"query":text}).then(function(result) {
+                console.log(result); 
+                $scope.ip_addrs = result;
             });
         };
 

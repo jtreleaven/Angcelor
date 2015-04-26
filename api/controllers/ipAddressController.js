@@ -75,24 +75,29 @@ exports.searchAllIP = function(req, res) {
             return next(err);
         }
         strs = [];
+        var search = reds.createSearch('ip');
         var ip_addrs = _.map(rows, function(row) {
-            strs.push(row.name + " " + row.description);
+            strs.push(row.description);
             return new ip.IP_Address(row.ipv4_address, row.in_subnet, row.name, row.dns, row.description, row.device_type, row.monitor);
         });
-        var search = reds.createSearch('ip');
 
+        strs.forEach(function(str, i){ search.index(str, i); });
         search
-            .query(query = req.body)
+            .query(query = req.body.query)
             .end(function(err, ids){
                 if (err) throw err;
+                
                 ids.forEach(function(id){
                   console.log('  - %s', strs[id]);
-                  foundIP.push(id);
-              });
-                console.log(req.body);
-                res.send(foundIP);
-                process.exit();
-
+                  foundIP.push(strs[id]);
+                });
+                
+                var results = _.map(ip_addrs, function(ip_row) {
+                    if (_.contains(foundIP, ip_row.description)) {
+                        return ip_row;
+                    }
+                });
+                res.send(_.compact(results));
         
     });
     });
