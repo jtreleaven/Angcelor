@@ -26,7 +26,7 @@ exports.getAllSubnets = function(req, res, next) {
                 return next(err_q);
             } else {
                 var subnets = _.map(rows, function(row) {
-                    return new Subnet.Subnet(row.subnet_id, row.name, row.mask, row.net, row.description)
+                    return new Subnet.Subnet(row.subnet_id, row.name, row.net, row.mask, row.description)
                 });
 
                 res.send(subnets);

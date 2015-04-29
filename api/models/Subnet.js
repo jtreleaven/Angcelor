@@ -5,8 +5,8 @@
 exports.Subnet = function(id, name, net, mask, description) {
     this.subnet_id = id;
     this.name = name;
-    this.mask = mask;
     this.net = net;
+    this.mask = mask;
     this.description = description;
 
     return this;

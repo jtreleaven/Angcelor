@@ -1,12 +1,12 @@
 angcelor.factory('ipAddress', function() {
 
     function ipAddress(name, in_subnet, address, monitored, description, deviceType) {
-        this.name = name;
+        this.dns = name;
         this.in_subnet = in_subnet;
-        this.address = address;
-        this.monitored = monitored;
+        this.ipv4_address = address;
+        this.monitor = monitored;
         this.description = description;
-        this.deviceType= deviceType;
+        this.device_type= deviceType;
 
         return this;
     }

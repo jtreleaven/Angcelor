@@ -23,10 +23,10 @@ exports.getAllIP = function(req, res, next) {
         }
         strs = [];
         var ip_addrs = _.map(rows, function(row) {
-            strs.push(row.name + " " + row.description);
+            //strs.push(row.name + " " + row.description);
             return new ip.IP_Address(row.ipv4_address, row.in_subnet, row.name, row.dns, row.description, row.device_type, row.monitor);
         });
-        var search = reds.createSearch('ip');
+        //var search = reds.createSearch('ip');
         res.send(ip_addrs);
         return next();
     });
@@ -47,36 +47,31 @@ exports.getAllIPAddressesInSubnet = function(req, res, next) {
 };
 
 exports.createIPAddress = function(req, res, next) {
-    conn.query("INSERT INTO ip_address SET ?", req.params, function(err, results) {
+    conn.query("INSERT INTO ip_address SET ? ON DUPLICATE KEY UPDATE dns=VALUES(dns), description=VALUES(description), device_type=VALUES(device_type), monitor=VALUES(monitor)", req.body,
+        function(err, results) {
         if (err) {
-            res.json({
-                type: false,
-                data: err
-            });
-        } else {
-            res.json({
-                type: true,
-                data: results
-            });
+            return next(err);
         }
+        res.send({status: 'success', result: results});
+        return next();
     });
 };
 
-exports.searchAllIP = function(req, res) {
-    var foundIP = [];
-    search
-    .query(query = req)
-    .end(function(err, ids){
-        if (err) throw err;
-        ids.forEach(function(id){
-          console.log('  - %s', strs[id]);
-          foundIP.push(id);
-      });
-        res.send(foundIP);
-        process.exit();
-    });
-
-};
+//exports.searchAllIP = function(req, res) {
+//    var foundIP = [];
+//    search
+//    .query(query = req)
+//    .end(function(err, ids){
+//        if (err) throw err;
+//        ids.forEach(function(id){
+//          console.log('  - %s', strs[id]);
+//          foundIP.push(id);
+//      });
+//        res.send(foundIP);
+//        process.exit();
+//    });
+//
+//};
 
 exports.updateIPAddress = function(req, res, next) {
     console.log(req.body);

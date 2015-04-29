@@ -3,6 +3,11 @@
 angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
     function($scope, SubnetAPI, IP_AddressAPI) {
 
+        $scope.subnet_reverse = false;
+        $scope.ip_reverse = false;
+        $scope.subnet_predicate = "name";
+        $scope.ip_predicate = "ipv4_address";
+
         function deselectSubnet() {
             for (var i = 0; i < $scope.subnets.length; i++) {
                 $scope.subnets[i].selected = false;
@@ -51,7 +56,7 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
 
         $scope.broadcastCreate = function() {
             var subnet = $scope.getSelectedSubnet();
-            $scope.$broadcast('create', subnet.subnet_id);
+            $scope.$broadcast('create', subnet);
         };
 
         $scope.editIpAddress = function(ip_addr) {
@@ -59,29 +64,41 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
         };
 
         $scope.editSubnet = function(subnet) {
+            console.log(subnet);
             $scope.$broadcast('subnet', subnet);
         };
 
+        $scope.deleteItem = function(item, type) {
+            $scope.item = item;
+            $scope.type = type;
+        };
+
         $scope.cancelDelete = function() {
-            $scope.itemToDelete = {};
+            $scope.item = null;
+            $scope.type = '';
         };
 
-        $scope.setDelete = function(subnet) {
-            $scope.itemToDelete = subnet;
-            console.log($scope.itemToDelete);
-            $scope.deleteType = 'subnet';
-        };
-
-        $scope.delete = function() {
-            if ($scope.deleteType == 'subnet') {
-                SubnetAPI.one($scope.itemToDelete.subnet_id).remove().then(function(result) {
-                    if (result.status == "failed") {
-                        // display error and didn't remove message
-                    } else {
-                        // Remove row and remove subnet instance from list
-                        var subnet_id = $scope.itemToDelete.subnet_id;
-                        $scope.subnets = _.without($scope.subnets, _.findWhere($scope.subnets, {subnet_id: subnet_id}));
+        $scope.delete = function(item, type) {
+            if (type === 'subnet') {
+                SubnetAPI.one(item.subnet_id).remove().then(function(result) {
+                    if (result.status === 'failed') {
+                        console.error(result);
                     }
+                    var subnet_id = item.subnet_id;
+                    $scope.subnets = _.without($scope.subnets, _.findWhere($scope.subnets, {subnet_id: subnet_id}));
+
+                }, function(error) {
+                    console.error(error);
+                });
+            } else {
+                IP_AddressAPI.one(item.ipv4_address).remove().then(function(result) {
+                    if (result.status == 'failed') {
+                        console.error(result);
+                    }
+                    var ipv4 = item.ipv4_address;
+                    $scope.ip_addrs = _.without($scope.ip_addrs, _.findWhere($scope.ip_addrs, {ipv4_address: ipv4}));
+                }, function(error) {
+                    console.error(error);
                 });
             }
         };

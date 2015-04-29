@@ -1,23 +1,29 @@
 <table class="table" id="ip_table">
     <thead>
         <tr>
-            <th>IP Address</th>
-            <th>Monitored</th>
-            <th>Description</th>
+            <th>
+                <a href="" ng-click="ip_predicate = 'ipv4_address'; ip_reverse = !ip_reverse;">IP Address</a>
+            </th>
+            <th>
+                <a href="" ng-click="ip_predicate = 'monitor'; ip_reverse = !ip_reverse;">Monitored</a>
+            </th>
+            <th>
+                <a href="" ng-click="ip_predicate = 'description'; ip_reverse = !ip_reverse;">Description</a>
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="ip_addr in ip_addrs | fuzzy: searchIP">
+        <tr ng-repeat="ip_addr in ip_addrs | fuzzy: searchIP | orderBy:ip_predicate:ip_reverse">
             <td>{{ ip_addr.ipv4_address }}</td>
-            <td class="column-center"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="ip_addr.monitor > 0"></span></td>
+            <td class="column-center"><span class="glyphicon glyphicon-ok" aria-hidden="true" ng-show="ip_addr.monitor"></span></td>
             <td>{{ ip_addr.description  }}</td>
             <td nowrap>
                 <div>
                     <button type="button" class="btn btn-default" data-toggle="modal" data-target="#editModal" ng-click="editIpAddress(ip_addr)">
                         <span class="glyphicon glyphicon-edit"></span>
                     </button>
-                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteConfirm" ng-click="setDelete(ip_addr)">
+                    <button type="button" class="btn btn-default" data-toggle="modal" data-target="#deleteConfirm" ng-click="deleteItem(ip_addr, 'ip')">
                         <span class="glyphicon glyphicon-trash"></span>
                     </button>
                 </div>

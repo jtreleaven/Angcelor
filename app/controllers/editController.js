@@ -2,8 +2,8 @@
  * Created by jeff on 4/13/15.
  */
 
-angcelor.controller('editCtrl', ['$scope', 'SubnetAPI',
-    function($scope, SubnetAPI) {
+angcelor.controller('editCtrl', ['$scope', 'ipAddress', 'SubnetAPI', 'IP_AddressAPI',
+    function($scope, ipAddress, SubnetAPI, IP_AddressAPI) {
         $scope.data = {};
         $scope.showSubnet = false;
         $scope.showIP = false;
@@ -22,12 +22,21 @@ angcelor.controller('editCtrl', ['$scope', 'SubnetAPI',
             });
         }
 
-        function submitIPChanges(ip_addr) {
-            ip_addr.put().then(function(result) {
+        /**
+         * Currently this will have to be done with a post
+         * action to the server due to the ipv4 address being
+         * the primary key for the ip_address table.
+         * @param data - This is the ip_address model from
+         *                  the form submission.
+         */
+        function submitIPChanges(data) {
+            var ip_addr = new ipAddress(data.name, data.in_subnet, data.ipv4_address, data.monitor, data.description, data.device_type);
+            IP_AddressAPI.post(ip_addr).then(function(result) {
                 if (result.status == 'failed') {
-                    alert('Update for ip address failed!');
-                    console.log(result);
+                    alert('Update for IP Address failed!');
+                    console.error(result);
                 } else {
+                    $scope.successMessage = "IP Address updated successfully!";
                     $scope.updateComplete = true;
                 }
             });
@@ -41,10 +50,10 @@ angcelor.controller('editCtrl', ['$scope', 'SubnetAPI',
         $scope.$on('ip', function(event, data) {
             $scope.editType = 'IP Address';
 
-            $scope.subnetName = "";
+            console.log(data);
 
             SubnetAPI.one(data.in_subnet).get().then(function(subnet) {
-
+                $scope.subnetName = subnet.name;
             });
             $scope.data = data;
             $scope.showIP = true;

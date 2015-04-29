@@ -34,7 +34,9 @@ angcelor.controller('createCtrl', ['$scope', '$upload', 'Subnet', 'ipAddress', '
         }
 
         function createIpAddress(data){
-            var ip_addr = new ipAddress(data.address, data.subnet.subnet_id, data.address, data.monitored, data.description, data.deviceType);
+            console.log(data);
+            var ip_addr = new ipAddress(data.name, data.in_subnet, data.ipv4_address, data.monitor, data.description, data.device_type);
+            console.log(ip_addr);
             IP_AddressAPI.post(ip_addr).then(function(result) {
                 if (result.status == 'failed') {
                     alert("Creation failed!");
@@ -50,7 +52,8 @@ angcelor.controller('createCtrl', ['$scope', '$upload', 'Subnet', 'ipAddress', '
         }
 
         $scope.$on('create', function(event, data) {
-            $scope.in_subnet = data;
+            $scope.subnetName = data.name;
+            $scope.data.in_subnet = data.subnet_id;
         });
 
         $scope.submitAdd = function(data) {
