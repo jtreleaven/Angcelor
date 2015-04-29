@@ -1,12 +1,15 @@
 
-angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI', 'IP_AddressAPI', 'CheckAPI',
-    function($scope, Subnet, ipAddress, SubnetAPI, IP_AddressAPI, CheckAPI) {
+angcelor.controller('createCtrl', ['$scope', '$upload', 'Subnet', 'ipAddress', 'SubnetAPI', 'IP_AddressAPI', 'CheckAPI',
+    function($scope, $upload, Subnet, ipAddress, SubnetAPI, IP_AddressAPI, CheckAPI) {
 
         var tabs = ['subnet', 'ip', 'file'];
+        $scope.successMessage = "";
         $scope.data = {};
         $scope.selectedTab = 1;
         $scope.actionComplete = false;
         $scope.actionSuccessful = false;
+        $scope.uploadInProgress = false;
+        $scope.uploadProgress = 0;
 
         function createSubnet(data) {
             var octets = data.mask.split('.');
@@ -21,6 +24,7 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
                         $scope.actionComplete = true;
                     } else {
                         $scope.data = {};
+                        $scope.successMessage = " Subnet Created Successfully!";
                         $scope.actionComplete = true;
                         $scope.actionSuccessful = true;
                         $scope.$parent.subnets.push(subnet);
@@ -37,6 +41,7 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
                     $scope.actionComplete = true;
                 } else {
                     $scope.data = {};
+                    $scope.successMessage = " IP Address created successfully!";
                     $scope.actionComplete = true;
                     $scope.actionSuccessful = true;
                     $scope.$parent.ip_addrs.push(ip_addr);
@@ -45,7 +50,7 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
         }
 
         $scope.$on('create', function(event, data) {
-            $scope.data.subnet = data;
+            $scope.in_subnet = data;
         });
 
         $scope.submitAdd = function(data) {
@@ -55,7 +60,7 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
             } else if (tab == 'ip') {
                 createIpAddress(data);
             } else if (tab == 'file') {
-                // file create stuff
+                // file create stuff handled separately
             } else {
                 // nothing here yet, maybe just using this for error reporting
             }
@@ -65,6 +70,32 @@ angcelor.controller('createCtrl', ['$scope', 'Subnet', 'ipAddress', 'SubnetAPI',
             $scope.data = {};
             $scope.actionComplete = false;
             $scope.actionSuccessful = false;
-        }
+        };
+
+
+        $scope.onFileSelect = function(file) {
+            $scope.uploadInProgress = true;
+            $scope.upload = $upload.upload({
+                url: '/api/file/upload',
+                method: 'POST',
+                file: file
+            }).progress(function(event) {
+                $scope.uploadProgress = parseInt(100.0 * event.loaded / event.total, 10);
+            }).success(function(data, status, headers, config) {
+                console.log(data);
+                $scope.successMessage = " File uploaded successfully!";
+
+                $scope.uploadInProgress = false;
+                // If you need uploaded file immediately
+                $scope.actionSuccessful = true;
+                $scope.actionComplete = true;
+            }).error(function(err) {
+                console.log(err);
+                $scope.uploadInProgress = false;
+                $scope.actionComplete = true;
+                console.log('Error uploading file: ' + err.message || err);
+            });
+        };
+
     }
 ]);

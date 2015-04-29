@@ -78,6 +78,21 @@ exports.searchAllIP = function(req, res) {
 
 };
 
+exports.updateIPAddress = function(req, res, next) {
+    console.log(req.body);
+    conn.query("UPDATE ip_address SET name = ?, dns = ?, description = ?, device_type = ?, monitor = ? WHERE ipv4_address = ?",
+        [req.body.name, req.body.dns, req.body.description, req.body.device_type, req.body.monitor, req.body.ipv4_address],
+        function(err, result) {
+            if (err) {
+                return next(err);
+            }
+
+            res.send({ status: 'success', result: result });
+            return next();
+        }
+    );
+};
+
 exports.deleteIPAddress = function(req, res, next) {
     conn.query("DELETE FROM ip_address WHERE ipv4_address=?", [req.params.ip], function(err, results) {
         if (err) {

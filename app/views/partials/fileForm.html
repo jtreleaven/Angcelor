@@ -1,5 +1,16 @@
 <form class="modal-form">
     <div class="text-center">
-        <button type="button" class="btn btn-default">browse</button>
+        <div class="form-group" ng-show="!uploadInProgress && !actionComplete">
+            <label for="fileSelect">Upload File</label>
+            <input type="file" id="fileSelect" data-ng-file-select="fileSelected = true" ng-model="file" />
+        </div>
+        <div class="progress" ng-show="uploadInProgress">
+            <div class="progress-bar" progress-bar="uploadProgress" role="progressbar" ng-aria-valuenow="{{ uploadProgress }}" ng-aria-valuemin="0" ng-aria-valuemax="100">
+                <span class="sr-only">{{ uploadProgress }}% Complete</span>
+            </div>
+        </div>
+        <div class="form-group" ng-show="fileSelected">
+            <button type="submit" class="btn btn-primary" ng-click="onFileSelect(file)">Upload</button>
+        </div>
     </div>
 </form>

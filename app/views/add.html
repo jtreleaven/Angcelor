@@ -27,7 +27,7 @@
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="resetForms()">Close</button>
-            <button type="button" class="btn btn-primary" ng-click="submitAdd(data)">Submit</button>
+            <button type="button" class="btn btn-primary" ng-click="submitAdd(data)" ng-show="!actionComplete">Submit</button>
         </div>
     </div>
 </div>

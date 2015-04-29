@@ -13,7 +13,7 @@ var pool = mysql.createPool({
     database: config.db.name
 });
 
-models_path = process.cwd() + '/api/models';
+var models_path = process.cwd() + '/api/models';
 var Subnet = require(models_path + "/Subnet.js");
 
 exports.getAllSubnets = function(req, res, next) {

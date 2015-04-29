@@ -10,7 +10,7 @@ module.exports = {
         name: "arcelor_ipam",
         host: "localhost",
         user: "root",
-        password: "brownie"
+        password: process.env.MYSQL_PWD
     }
 };
 

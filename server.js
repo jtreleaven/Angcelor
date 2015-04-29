@@ -39,8 +39,12 @@ app.get("/api/check/getallip", controllers.ipAddressController.searchAllIP);
 app.get("/api/ip", controllers.ipAddressController.getAllIP);
 app.get("/api/ip/:id", controllers.ipAddressController.getAllIPAddressesInSubnet);
 app.post("/api/ip", controllers.ipAddressController.createIPAddress);
-app.delete("/api/ip/:ip",controllers.ipAddressController.deleteIPAddress);
+app.delete("/api/ip/:ip", controllers.ipAddressController.deleteIPAddress);
+app.put("/api/ip", controllers.ipAddressController.updateIPAddress);
 // End of IP Address actions
+
+// File upload and export section
+app.post("/api/file/upload", controllers.fileController.uploadExcel);
 
 app.set('port', (process.env.PORT || 8000));
 

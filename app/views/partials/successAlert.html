@@ -1,8 +1,13 @@
 <div class="alert alert-success" role="alert">
-    <p>
-        <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
-    </p>
-    <p>
-        <strong>Subnet created successfully!</strong> You can now close this modal.
-    </p>
+    <div class="row">
+        <p class="col-sm-5">
+            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span>
+        </p>
+    </div>
+
+    <div class="row">
+        <p class="col-sm-5"><strong ng-bind="successMessage"></strong>
+        <p class="col-sm-6"> You can now close the modal.</p>
+    </div>
+
 </div>

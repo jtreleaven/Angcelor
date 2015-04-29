@@ -3,6 +3,7 @@
 // AngularJS stub file
 var angcelor = angular.module("angcelor", [
     'ngRoute',
+    'ngFileUpload',
     'ngResource',
     'restangular',
     'ui.layout',

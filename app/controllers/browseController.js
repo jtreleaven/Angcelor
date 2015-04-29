@@ -51,12 +51,11 @@ angcelor.controller("browseCtrl", ['$scope', 'SubnetAPI', 'IP_AddressAPI',
 
         $scope.broadcastCreate = function() {
             var subnet = $scope.getSelectedSubnet();
-            $scope.$broadcast('create', subnet);
+            $scope.$broadcast('create', subnet.subnet_id);
         };
 
         $scope.editIpAddress = function(ip_addr) {
             $scope.$broadcast('ip', ip_addr);
-            $scope.$broadcast('create', $scope.getSelectedSubnet());
         };
 
         $scope.editSubnet = function(subnet) {
